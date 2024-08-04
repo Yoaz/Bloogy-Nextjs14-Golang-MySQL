@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-weight: 600 !important;
+}
+
+.container input,
+.container textarea,
+.container select {
+  padding: 20px;
+  background-color: var(--bgSoft);
+  border: none;
+  border-radius: 5px;
+  color: var(--textColor);
+}
+
+.container button {
+  padding: 20px;
+  cursor: pointer;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 5px;
+  color: var(--btnSoft);
+  font-weight: bold;
+}
+
+.container .post-select {
+  margin-bottom: 20px;
+}
+
+.container .post-select select {
+  width: 100%;
+}
+
+.container .post-select label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: var(--textColor);
+}

@@ -1,0 +1,91 @@
+:root {
+  --bg: #fcfcfc;
+  --bgSoft: #f0e4c0;
+  --text: #000000;
+  --textSoft: #22261b;
+  --btn: #000000;
+  --btnSoft: #fcfcfc;
+  --btnDlt: #e84b58;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 1536px;
+  margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 
+* Simple global button animation
+* TODO: remove and create a nicer one 
+*/
+button:hover {
+  font-size: 102%;
+}
+
+button {
+  transition: font-size 0.3s ease-in-out;
+}
+
+@media (max-width: 1536px) {
+  .container {
+    width: 1366px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 1024px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 640px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 475px;
+  }
+}
+@media (max-width: 475px) {
+  .container {
+    width: 380px;
+  }
+}

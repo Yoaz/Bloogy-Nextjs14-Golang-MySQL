@@ -1,0 +1,598 @@
+{
+	"info": {
+		"_postman_id": "db1def22-6885-45a2-a582-18010dbd2381",
+		"name": "Blooogy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31762766"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Admin Only",
+					"item": [
+						{
+							"name": "Get ALL Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:4000/api/users/",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"users",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Single User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMjU5ODU0N30.WAMtSTUsn-k_Lw9QAMI-xyZcWbMvpVjIWw8oJmm3VCY",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:4000/api/users/1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get Single User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:4000/api/users/1",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Admin Only Or Author Of Post",
+					"item": [
+						{
+							"name": "Update Single Post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImV4cCI6MTcyMjc4ODIzM30.Gmd6ny6rZ0QtTc-pHNUL65FDxE1d3fJOCv7o7JTQqY4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"AN UPDATE\",\n    \"body\": \"AN UPDATE\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "127.0.0.1:4000/api/posts/24",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"posts",
+										"24"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Single Post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJlbWFpbCI6InJvbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMjY4OTYyMH0.PoiCPLMDwngmbkORFMevbY3lDIxFD3E6jStG6jOSHdQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "127.0.0.1:4000/api/posts/1",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"posts",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get ALL Posts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJlbWFpbCI6InJvbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMjY4OTYyMH0.PoiCPLMDwngmbkORFMevbY3lDIxFD3E6jStG6jOSHdQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:4000/api/posts/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL Posts By Specific User's ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJlbWFpbCI6InJvbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMjc3ODkwM30.NQMgMDxfuWnOpfhIkm4sdYcGvRF03SeeSUlcsJ9EabQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:4000/api/user/post",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"user",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJlbWFpbCI6InJvbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMjY4OTYyMH0.PoiCPLMDwngmbkORFMevbY3lDIxFD3E6jStG6jOSHdQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"My First Blog Post\",\n    \"body\": \"Hello World, this is me!\",\n    \"author_id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:4000/api/posts/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Post",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJlbWFpbCI6InJvbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMjg2NDkxMH0.xDKP3y-yrn4RX4SBRe42g9P3090x4nidkgVbWOP_da0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:4000/api/posts/13",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"posts",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Register - Admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"123\",\n    \"role\": \"admin\"\n}"
+								},
+								"url": {
+									"raw": "127.0.0.1:4000/api/auth/register",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login - Admin",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"123\"\n}"
+								},
+								"url": {
+									"raw": "127.0.0.1:4000/api/auth/login",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Register User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"john@gmail.com\",\n    \"password\": \"123\",\n    \"role\": \"user\"\n}"
+								},
+								"url": {
+									"raw": "127.0.0.1:4000/api/auth/register",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login - User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"john@gmail.com\",\n    \"password\": \"123\"\n}"
+								},
+								"url": {
+									"raw": "127.0.0.1:4000/api/auth/login",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "4000",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Bad Requests Tests",
+			"item": [
+				{
+					"name": "Login - Incorrect Pass",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"john@gmail.com\",\n    \"password\": \"12\"\n}"
+						},
+						"url": {
+							"raw": "127.0.0.1:4000/api/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Post - No Bearer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:4000/api/posts/id",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"posts",
+								"id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post - Empty Payload",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJlbWFpbCI6InJvbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImV4cCI6MTcyMjY4OTYyMH0.PoiCPLMDwngmbkORFMevbY3lDIxFD3E6jStG6jOSHdQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:4000/api/posts/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ALL Users - Not Admin",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:4000/api/users/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
