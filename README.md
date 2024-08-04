@@ -64,7 +64,7 @@ To create an Admin user, use Postman or `curl` to send a request to the `/auth/r
 
 ```json
 {
-  "email": "userEmail",
+  "email": "adminEmail",
   "password": "adminPassword",
   "role": "admin" // Default role is "user"
 }
